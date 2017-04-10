@@ -1,0 +1,27 @@
+﻿@model string
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container" ng-init="courses = [ 
+     {number: 'MATH40002', name : 'Level 4 introduction to mathematics', lecturer : 'Nigel Ray'},
+     {number:'MATH3002', name : 'Level 3 introduction to mathematics', lecturer : '3el Ray'},
+     {number: 'MATH40032', name : 'Level3roduction to mathematics', lecturer : 'Ni3y'}
+     ]">
+    <div class="row">
+        <div class="span12">
+            <table class="table table-condensed table-hover">
+                <tr>
+                    <th> Course</th>
+                    <th> Course Name</th>
+                    <th> Lecturer</th>
+                </tr>
+                <tr ng-repeat="a in courses">
+                    <th> {{a.number}}</th>
+                    <th>{{a.name}}</th>
+                    <th>{{a.lecturer}}</th>
+                </tr>                    
+            </table>
+        </div>
+    </div>
+</div>
+
